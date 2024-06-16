@@ -8,7 +8,7 @@ apt upgrade -y
 
 ## ติดตั้ง PostgreSQL
 ```
-apt install postgresql
+apt install -y postgresql
 ```
 
 ## ตั้งค่า Primary Node
