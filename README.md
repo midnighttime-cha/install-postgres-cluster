@@ -56,7 +56,7 @@ systemctl stop postgresql
 ```
 2. สร้าง Directory สำหรับ Standby node
 ```
-sudo rsync -av /var/lib/postgresql/[POSTGRESQL_VERSION]/main/ /var/lib/postgresql/[POSTGRESQL_VERSION]/main/
+rsync -av /var/lib/postgresql/[POSTGRESQL_VERSION]/main/ /var/lib/postgresql/[POSTGRESQL_VERSION]/main/
 ```
 3. จากนั้นแก้ไขไฟล์ `postgresql.conf`
 ```
