@@ -73,6 +73,24 @@ primary_slot_name = 'standby_slot'
 systemctl start postgresql
 ```
 
+## ตั้งค่า Error: sorry, too many clients already.
+```
+nano /etc/postgresql/[POSTGRESQL VERSION]/main/postgresql.conf
+```
+แก้ไขตามนี้
+```
+max_connections = 300
+shared_buffers = 80MB
+```
+และไฟล์ sysctl.conf
+```
+nano /etc/sysctl.conf
+```
+เพิ่มคำสั่งต่อไปนี้ลงไป
+```
+kernel.shmmax=100663296
+```
+
 
 
 ### Credit
