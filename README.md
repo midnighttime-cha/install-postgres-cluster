@@ -91,6 +91,19 @@ nano /etc/sysctl.conf
 kernel.shmmax=100663296
 ```
 
+## ตั้งค่า Rotage log
+เข้าไปแก้ไขในไฟล์ `postgresql.conf`
+```
+nano /etc/postgresql/[POSTGRESQL VERSION]/main/postgresql.conf
+```
+ตั้งค่าตามนี้
+```
+logging_collector = on
+log_directory = '/var/log/postgresql'
+log_filename = 'postgresql-%Y-%m-%d_%H%M%S.log'
+log_rotation_age = 1d
+log_rotation_size = 10MB
+```
 
 
 ### Credit
